@@ -82,15 +82,32 @@ if CLIENT then
 	end
 end
 
-for i, filename in pairs(file.Find(GM.FolderName.."/gamemode/languages/*.lua", "LUA")) do
-	LANGUAGE = {}
-	AddCSLuaFile("languages/"..filename)
-	include("languages/"..filename)
-	for k, v in pairs(LANGUAGE) do
-		translate.AddTranslation(k, v)
-	end
-	LANGUAGE = nil
+local function LoadLanguages(path)
+    local files, folders = file.Find(path .. "/*", "LUA")
+
+    for _, filename in ipairs(files) do
+        if string.EndsWith(filename, ".lua") then
+            local relativePath = path .. "/" .. filename
+
+            LANGUAGE = {}
+
+            AddCSLuaFile(relativePath)
+            include(relativePath)
+
+            for k, v in pairs(LANGUAGE) do
+                translate.AddTranslation(k, v)
+            end
+
+            LANGUAGE = nil
+        end
+    end
+
+    for _, folder in ipairs(folders) do
+        LoadLanguages(path .. "/" .. folder)
+    end
 end
+
+LoadLanguages(GM.FolderName .. "/gamemode/languages")
 
 local meta = FindMetaTable("Player")
 if not meta then return end

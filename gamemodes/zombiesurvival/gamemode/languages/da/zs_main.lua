@@ -22,10 +22,12 @@ LANGUAGE.that_life									= "Det liv..."
 LANGUAGE.x_damage_to_barricades						= "%d skade tilført barrikade"
 LANGUAGE.x_damage_to_humans							= "%d skade tilført mennesker."
 LANGUAGE.x_brains_eaten								= "%d hjerne blevet spist"
+
 LANGUAGE.press_rmb_to_cycle_targets					= "Tryk RMB for at skifte mellem mål"
 LANGUAGE.press_lmb_to_spawn_on_them					= "Tryk LMB for at komme i live oven på dem"
 LANGUAGE.press_lmb_to_spawn							= "Tryk LMB for at komme i live"
 LANGUAGE.observing_x								= "Observerer %s (%d)"
+
 LANGUAGE.waiting_for_next_wave						= "Venter på at næste runde begynder..."
 LANGUAGE.impossible									= "Umuligt."
 LANGUAGE.trying_to_put_nails_in_glass				= "At prøve at hamre et objekt fast til noget glas, er bare idiotisk."
@@ -54,12 +56,11 @@ LANGUAGE.arsenal_upgraded							= "Arsenal Opgraderet"
 LANGUAGE.final_wave									= "SIDSTE RUNDE ER PÅBEGYNDT!"
 LANGUAGE.final_wave_sub								= "ALLE personer oplåst, og chancen for genoplivelse er sluttet!"
 LANGUAGE.wave_x_has_begun							= "Runde %d er påbegyndt!"
-LANGUAGE.x_unlocked									= "%s oplåst!"
 LANGUAGE.wave_x_is_over								= "Runde %d er sluttet!"
-LANGUAGE.wave_x_is_over_sub							= "De udøde er stoppet med at komme op fra deres grave, og point butikken har %d%% lukket."
+--LANGUAGE.wave_x_is_over_sub					    = "De udøde er stoppet med at komme op fra deres grave, og point butikken har %d%% lukket." -- Outdated
 LANGUAGE.you_are_x									= "Du er %s!"
 LANGUAGE.x_has_risen_as_y							= "%s er genoplivet som %s!!"
-LANGUAGE.x_has_risen								= "%s er genoplivet!"
+--LANGUAGE.x_has_risen								= "%s er genoplivet!" -- Outdated
 LANGUAGE.cant_use_worth_anymore						= "Du kan ikke bruge Worth menuen længere!"
 LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "Den person er ikke oplåst endnu. Personen vil blive oplåst i starten af runde %d."
 LANGUAGE.you_are_already_a_x						= "Du er allerede en %s."
@@ -107,14 +108,6 @@ LANGUAGE.integrity_x								= "Helhed: %d%%"
 LANGUAGE.empty										= "TOM"
 LANGUAGE.manual_control								= "MANUAL KONTROL"
 LANGUAGE.arsenal_crate								= "Arsenal Kasse"
-
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "De udøde har nedbrudt udgangen!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "Kun en resterer! Hvis den falder, vil der ikke være nogen mulighed for flugt!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "Kun en resterer!"
-LANGUAGE.exit_destroyed_x_remain					= "%d udgange resterer."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "De udøde har ødelagt den sidste udgang."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "Der er ingen håb for undslippelse."
 
 -- Message beacon messages
 LANGUAGE.message_beacon_1							= "Kom her op"
@@ -166,7 +159,6 @@ LANGUAGE.class_zombie_legs							= "Zombie Legs"
 LANGUAGE.class_wraith								= "Wraith"
 LANGUAGE.class_flesh_creeper						= "Flesh Creeper"
 LANGUAGE.class_fast_zombie_legs						= "Fast Zombie Legs"
-LANGUAGE.class_chem_zombie							= "Chem Zombie"
 LANGUAGE.class_shade								= "Shade"
 
 -- Class descriptions
@@ -187,9 +179,7 @@ LANGUAGE.description_wilowisp						= "Nogle gang hentydet til som ånderne af d�
 LANGUAGE.description_zombie_torso					= "Du burde ikke kunne se det her… Men nu du gør, så er Anders Volander sej!"
 LANGUAGE.description_zombie_legs					= "Du burde ikke kunne se det her… Men nu du gør, så er Anders Volander sej!"
 LANGUAGE.description_wraith							= "En udød eller en skiggelse? \nIkke meget er kendt omkring den, udover det faktum at de bruger en \nunik skygge egenskab, for at gøre sig selv usynlig, og skarpe klør til at skære ting til konfetti."
-LANGUAGE.description_flesh_creeper					= "*pending*"
 LANGUAGE.description_fast_zombie_legs				= "Du burde ikke kunne se det her… Men nu du gør, så er Anders Volander sej!"
-LANGUAGE.description_chem_zombie					= "Chem Zombies krop består af meget giftige kemikalier. \nDen har ingen mulighed for angreb, udover at håbe på at blive dræbt, og derved sprænge i luften, ved siden af en overlevende. \nEller måske en hel gruppe af dem?"
 LANGUAGE.description_shade							= "Ved at lave et stærkt magnetisk område omkring sig selv, vil alle kugler og nærkampsangreb blive ligegyldige omkring den. \nMen af en eller anden grund kan den ikke lide skarpe lys."
 
 -- Class control schemes
@@ -197,15 +187,13 @@ LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOA
 LANGUAGE.controls_poison_zombie						= "> PRIMARY: Claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream"
 LANGUAGE.controls_fast_zombie						= "> PRIMARY: Claws\n> SECONDARY: Lunge / Climb (next to wall)\n> RELOAD: Scream"
 LANGUAGE.controls_bloated_zombie					= "> PRIMARY: Claws\n> SECONDARY: Moan\n> SPRINT: Feign death\n> ON DEATH: Poison Gibs"
-LANGUAGE.controls_ghoul								= "> PRIMARY: Poison claws\n> SECONDARY: Flesh toss\n> SPRINT: Feign death\n> RELOAD: Scream\n> ON HIT HUMAN: Slow\n> ON HIT BY HUMAN: Poison ejection"
+--LANGUAGE.controls_ghoul								= "> PRIMARY: Poison claws\n> SECONDARY: Flesh toss\n> SPRINT: Feign death\n> RELOAD: Scream\n> ON HIT HUMAN: Slow\n> ON HIT BY HUMAN: Poison ejection" -- Outdated
 LANGUAGE.controls_headcrab							= "> PRIMARY: Lunge attack\n> RELOAD: Burrow"
 LANGUAGE.controls_fast_headcrab						= "> PRIMARY: Lunge attack"
 LANGUAGE.controls_poison_headcrab					= "> PRIMARY: Lunge attack\n> SECONDARY: Spit poison\n> ON HIT HUMAN: Deadly poison\n> ON HIT POISON IN EYES: Blind\n> RELOAD: Scream"
 LANGUAGE.controls_the_tickle_monster				= "> PRIMARY: Elastic claws\n> SECONDARY: Moan"
 LANGUAGE.controls_nightmare							= "> PRIMARY: Death touch\n> SECONDARY: Moan"
-LANGUAGE.controls_pukepus							= "> PRIMARY: Puke"
+--LANGUAGE.controls_pukepus							= "> PRIMARY: Puke" -- Outdated
 LANGUAGE.controls_bonemesh							= "> PRIMARY: Claws\n> SECONDARY: Toss blood bomb"
 LANGUAGE.controls_wraith							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> INVISIBILITY BASED ON MOVEMENT AND VIEW DISTANCE"
-LANGUAGE.controls_flesh_creeper						= "> PRIMARY: Claws\n> SECONDARY: Head Butt"
-LANGUAGE.controls_chem_zombie						= "> ON DEATH: Poison Bomb"
-LANGUAGE.controls_shade								= "> PRIMARY: Lift\n> SECONDARY: Throw"
+--LANGUAGE.controls_shade								= "> PRIMARY: Lift\n> SECONDARY: Throw" -- Outdated

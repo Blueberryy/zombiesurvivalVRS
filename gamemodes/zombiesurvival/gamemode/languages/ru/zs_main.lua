@@ -195,7 +195,7 @@ LANGUAGE.controls_nightmare							= "> ПЕРВИЧНЫЙ: Прикоснове�
 --LANGUAGE.controls_pukepus							= "> ПЕРВИЧНЫЙ: Рвота" -- Outdated
 LANGUAGE.controls_bonemesh							= "> ПЕРВИЧНЫЙ: Когти\n> ВТОРИЧНЫЙ: Кинуть кровавой бомбой"
 LANGUAGE.controls_wraith							= "> ПЕРВИЧНЫЙ: Когти\n> ВТОРИЧНЫЙ: Крик\n> НЕВИДИМОСТЬ ЗАВИСИТ ОТ ДВИЖЕНИЯ И РАССТОЯНИЯ ВИДИМОСТИ"
---LANGUAGE.controls_shade								= "> ПЕРВИЧНЫЙ: Левитация\n> ВТОРИЧНЫЙ: Кинуть" -- Outdated
+--LANGUAGE.controls_shade							= "> ПЕРВИЧНЫЙ: Левитация\n> ВТОРИЧНЫЙ: Кинуть" -- Outdated
 
 -- The help file... Quite big! I wouldn't blame you if you didn't translate this part.
 LANGUAGE.help_cat_introduction						= "Вступление"

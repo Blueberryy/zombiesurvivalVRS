@@ -21,9 +21,11 @@ LANGUAGE.that_life									= "In dat leven..."
 LANGUAGE.x_damage_to_barricades						= "%d schade toegericht aan barricades"
 LANGUAGE.x_damage_to_humans							= "%d schade toegericht aan de mensen"
 LANGUAGE.x_brains_eaten								= "%d hersenen gegeten"
+
 LANGUAGE.press_rmb_to_cycle_targets					= "Klik RMK om tussen zombies te wisselen"
 LANGUAGE.press_lmb_to_spawn_on_them					= "Klik LMK om op ze te spawnen"
 LANGUAGE.press_lmb_to_spawn							= "Klik LMK om te spawnen"
+
 LANGUAGE.observing_x								= "Je observeert %s (%d)" 
 LANGUAGE.waiting_for_next_wave						= "Wachten op de volgende aanvalsgolf om te beginnen"
 LANGUAGE.impossible									= "Onmogelijk."
@@ -53,12 +55,11 @@ LANGUAGE.arsenal_upgraded							= "Arsenaal verbeterd"
 LANGUAGE.final_wave									= "DE LAATSE AANVALSGOLF IS BEGONNEN!"
 LANGUAGE.final_wave_sub								= "ALLE klasse vrijgespeeld en de kans ter verlossing is over!"
 LANGUAGE.wave_x_has_begun							= "Aanvalsgolf %d is begonnen!"
-LANGUAGE.x_unlocked									= "%s vrijgespeeld!"
 LANGUAGE.wave_x_is_over								= "Aanvalsgolf %d is over!"
-LANGUAGE.wave_x_is_over_sub							= "De levende doden zijn voor nu gestopt en de punten winkel is %d%% goedkoper."
+--LANGUAGE.wave_x_is_over_sub						= "De levende doden zijn voor nu gestopt en de punten winkel is %d%% goedkoper." -- Outdated
 LANGUAGE.you_are_x									= "Je bent %s"
 LANGUAGE.x_has_risen_as_y							= "%s is ontwaakt als %s!!"
-LANGUAGE.x_has_risen								= "%s is ontwaakt!"
+--LANGUAGE.x_has_risen								= "%s is ontwaakt!" -- Outdated
 LANGUAGE.cant_use_worth_anymore						= "Je kunt het waarde menu niet meer gebruiken!"
 LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "Deze klasse is nog niet vrijgespeeld. Hij zal vrijgespeeld zijn aan het begin van aanvalsgolf %d"
 LANGUAGE.you_are_already_a_x						= "Je bent al een %s."
@@ -106,14 +107,6 @@ LANGUAGE.integrity_x								= "Integriteit: %d%%"
 LANGUAGE.empty										= "LEEG"
 LANGUAGE.manual_control								= "HANDMATIGE BESTURING"
 LANGUAGE.arsenal_crate								= "Arsenaal Krat"
-
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "De zombies hebben een uitgang vernietigd!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "Nog een over! Als die ook kapot is, dan is het over voor ons!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "Nog een over!"
-LANGUAGE.exit_destroyed_x_remain					= "%d uitgangen over."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "De zombies hebben de laatste uitgang vernietigd."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "Er is geen onstappen meer..."
 
 -- Message beacon messages
 LANGUAGE.message_beacon_1							= "Verzamel je hier!"
@@ -163,9 +156,7 @@ LANGUAGE.class_wilowisp								= "Wil O' Wisp"
 LANGUAGE.class_zombie_torso							= "Zombie Torso"
 LANGUAGE.class_zombie_legs							= "Zombie Benen"
 LANGUAGE.class_wraith								= "Wraith"
-LANGUAGE.class_flesh_beast							= "Flesh Beast"
 LANGUAGE.class_fast_zombie_legs						= "Snelle Zombie Benen"
-LANGUAGE.class_chem_zombie							= "Chem Zombie"
 LANGUAGE.class_shade								= "Shade"
 
 -- Class descriptions
@@ -186,9 +177,7 @@ LANGUAGE.description_wilowisp						= "Wordt soms ook wel de geest van de doden g
 LANGUAGE.description_zombie_torso					= "Dit hoor je niet eens te zien!"
 LANGUAGE.description_zombie_legs					= "Dit hoor je niet eens te zien!"
 LANGUAGE.description_wraith							= "Een zombie of een verschijning?\nNiet veel is er te weten gekomen over hem behalve dan dat hij zijn\nunieke sluip verdediging en scherpe klauwen gebruikt om dingen in mootjes te snijden."
-LANGUAGE.description_flesh_beast					= "*pending*"
 LANGUAGE.description_fast_zombie_legs				= "Dit hoor je niet eens te zien!"
-LANGUAGE.description_chem_zombie					= "The Chem Zombies lichaam bestaat uit vluchtige chemicaliën.\nHet kan niet aanvallen, echter zal het opblazen naast een mens en die schade toerichten."
 LANGUAGE.description_shade							= "Door een sterk magnetisch veld omzich zelf heen te maken worden alle kogels en melee aanvallen nutteloos tegen hem.\nOm de een of andere reden kan de Shade niet tegen fel licht."
 
 -- Class control schemes
@@ -196,15 +185,13 @@ LANGUAGE.controls_zombie							= "> PRIMARY: Klauwen\n> SECONDARY: Schreeuw\n> R
 LANGUAGE.controls_poison_zombie						= "> PRIMARY: Klauwen\n> SECONDARY: Vlees gooien\n> RELOAD: Schreeuw"
 LANGUAGE.controls_fast_zombie						= "> PRIMARY: Klauwen\n> SECONDARY: Springen / Klimmen (naast een muur)\n> RELOAD: Shreeuw"
 LANGUAGE.controls_bloated_zombie					= "> PRIMARY: Klauwen\n> SECONDARY: Kreun\n> SPRINT: Dood spelen\n> ALS JE STERFT: Gif stukken"
-LANGUAGE.controls_ghoul								= "> PRIMARY: Gif Klauwen\n> SECONDARY: Vlees gooien\n> SPRINT: Dood spelen\n> RELOAD: Schreeuw\n> ALS JE EEN MENS RAAKT: Sloom\n> ALS JE GERAAKT WORDT DOOR EEN MENS: Gif schieten"
+--LANGUAGE.controls_ghoul							= "> PRIMARY: Gif Klauwen\n> SECONDARY: Vlees gooien\n> SPRINT: Dood spelen\n> RELOAD: Schreeuw\n> ALS JE EEN MENS RAAKT: Sloom\n> ALS JE GERAAKT WORDT DOOR EEN MENS: Gif schieten" -- Outdated
 LANGUAGE.controls_headcrab							= "> PRIMARY: Lunge aanval\n> RELOAD: In de grond kruipen"
 LANGUAGE.controls_fast_headcrab						= "> PRIMARY: Lunge aanval"
 LANGUAGE.controls_poison_headcrab					= "> PRIMARY: Lunge aanval\n> SECONDARY: Spuug gif\n> ALS JE EEN MENS RAAKT: Dodelijk gif\n> ALS JE GIF IN DE OGEN SCHIET: Verblinden\n> RELOAD: Schreeuw"
 LANGUAGE.controls_the_tickle_monster				= "> PRIMARY: Elastiche Klauwen\n> SECONDARY: Kreun"
 LANGUAGE.controls_nightmare							= "> PRIMARY: 'Death touch'\n> SECONDARY: Kreun"
-LANGUAGE.controls_pukepus							= "> PRIMARY: Kotsen"
+--LANGUAGE.controls_pukepus							= "> PRIMARY: Kotsen" -- Outdated
 LANGUAGE.controls_bonemesh							= "> PRIMARY: Klauwen\n> SECONDARY: Gooi bloed bom"
 LANGUAGE.controls_wraith							= "> PRIMARY: Klauwen\n> SECONDARY: Schreeuw\n> ONZICHTBAARHUID GEBASEERD OP BEWEGING EN AFSTAND"
-LANGUAGE.controls_flesh_beast						= "> PRIMARY: Klauwen\n> SECONDARY: Hoofd stoot"
-LANGUAGE.controls_chem_zombie						= "> ALS JE STERFT: Gif Bom"
-LANGUAGE.controls_shade								= "> PRIMARY: Op pakken\n> SECONDARY: Gooien"
+--LANGUAGE.controls_shade							= "> PRIMARY: Op pakken\n> SECONDARY: Gooien" -- Outdated

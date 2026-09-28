@@ -22,9 +22,11 @@ LANGUAGE.that_life									= "Dieses Leben..."
 LANGUAGE.x_damage_to_barricades						= "%d Schaden an Barrikaden"
 LANGUAGE.x_damage_to_humans							= "%d Schaden an Menschen"
 LANGUAGE.x_brains_eaten								= "%d Gehirne gefressen"
+
 LANGUAGE.press_rmb_to_cycle_targets					= "Drücke RMT um das nächste Ziel zu wählen"
 LANGUAGE.press_lmb_to_spawn_on_them					= "Drücke LMT um auf ihnen zu spawnen"
 LANGUAGE.press_lmb_to_spawn							= "Drück die LMT um zu spawnen"
+
 LANGUAGE.observing_x								= "%s beobachten (%d)"
 LANGUAGE.waiting_for_next_wave						= "Es wird auf den Beginn der nächsten Welle gewartet..."
 LANGUAGE.impossible									= "Unmöglich."
@@ -54,12 +56,11 @@ LANGUAGE.arsenal_upgraded							= "Arsenal verbessert"
 LANGUAGE.final_wave									= "DIE LETZTE WELLE HAT BEGONNEN!"
 LANGUAGE.final_wave_sub								= "ALLE Klassen freigeschaltet und die Chance zurückzukehren ist weg!"
 LANGUAGE.wave_x_has_begun							= "Welle %d hat angefangen!"
-LANGUAGE.x_unlocked									= "%s freigeschaltet!"
 LANGUAGE.wave_x_is_over								= "Welle %d ist rum!"
-LANGUAGE.wave_x_is_over_sub							= "Die Anzahl der Untoten steigt nicht mehr und der Points Shop ist %d%% aus."
+--LANGUAGE.wave_x_is_over_sub						= "Die Anzahl der Untoten steigt nicht mehr und der Points Shop ist %d%% aus." -- Outdated
 LANGUAGE.you_are_x									= "Du bist %s!"
 LANGUAGE.x_has_risen_as_y							= "%s ist auferstanden als %s!!"
-LANGUAGE.x_has_risen								= "%s ist auferstanden!"
+--LANGUAGE.x_has_risen								= "%s ist auferstanden!" -- Outdated
 LANGUAGE.cant_use_worth_anymore						= "Du kannst den Worth Menu nicht mehr verwenden!"
 LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "Diese Klasse ist noch nicht freigeschaltet. Sie wird das erst beim Start von Welle %d sein."
 LANGUAGE.you_are_already_a_x						= "Du bist schon tot %s."
@@ -107,14 +108,6 @@ LANGUAGE.integrity_x								= "Unversehrtheit: %d%%"
 LANGUAGE.empty										= "LEER"
 LANGUAGE.manual_control								= "MANUELLE KONTROLLE"
 LANGUAGE.arsenal_crate								= "Arsenal Crate"
-
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "Die Untoten haben einen Ausgang zerstört!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "Nur noch eins steht! Wenn es zerstört wird gibt es keine Hoffnung auf eine Flucht!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "Nur noch eins steht!"
-LANGUAGE.exit_destroyed_x_remain					= "%d vorhandene Ausgänge."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "Die Zombies haben den letzten Ausgang zerstört."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "Es gibt keine Hoffnung auf ein Entkommen."
 
 -- Message beacon messages
 LANGUAGE.message_beacon_1							= "Trefft euch hier"
@@ -164,9 +157,7 @@ LANGUAGE.class_wilowisp								= "Wil O' Wisp"
 LANGUAGE.class_zombie_torso							= "Zombietorso"
 LANGUAGE.class_zombie_legs							= "Zombiebeine"
 LANGUAGE.class_wraith								= "Wraith"
-LANGUAGE.class_flesh_beast							= "Flesh Beast"
 LANGUAGE.class_fast_zombie_legs						= "Beine des schnellen Zombies"
-LANGUAGE.class_chem_zombie							= "Chem Zombie"
 LANGUAGE.class_shade								= "Shade"
 
 -- Class descriptions
@@ -187,9 +178,7 @@ LANGUAGE.description_wilowisp						= "Manchmal als Geister der Toten bezeichnet.
 LANGUAGE.description_zombie_torso					= "Du solltest das noch nicht einmal sehen."
 LANGUAGE.description_zombie_legs					= "Du solltest das noch nicht einmal sehen."
 LANGUAGE.description_wraith							= "Ein Zombie oder ein Gespenst?\nNicht viel ist über es bekannt, außer der Tatsache dass es seine\nbesondere Unsichtbarkeit und scharfen Klauen verwendet um Dinge in Scheiben zu schneiden."
-LANGUAGE.description_flesh_beast					= "*Noch nicht fertig*"
 LANGUAGE.description_fast_zombie_legs				= "Du solltest das noch nicht einmal sehen."
-LANGUAGE.description_chem_zombie					= "Der Chem Zombie beinhaltet etherische und giftige Chemikalien.\nEs hat keine anderen Absichten neben dem Angreifen, außer getötet zu werden, in Hoffnung in der Nähe von Menschen zu explodieren."
 LANGUAGE.description_shade							= "In dem es ein starkes magnetisches Feld um sich herum aufbaut werden alle Angriffe mit Projektilen und Nahkampfwaffen nutzlos.\nAus irgendeinem Grund ist Shade verletzbar bei hellem Licht."
 
 -- Class control schemes
@@ -197,18 +186,16 @@ LANGUAGE.controls_zombie							= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Schrei
 LANGUAGE.controls_poison_zombie						= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Fleisch werfen\n> RELOAD: Schreien"
 LANGUAGE.controls_fast_zombie						= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Sturzangriff / Klettern (nahe einer Wand)\n> RELOAD: Schreien"
 LANGUAGE.controls_bloated_zombie					= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Stöhnen\n> SPRINT: Tod vortäuschen\n> BEIM TOD: Giftige Innereien"
-LANGUAGE.controls_ghoul								= "> HAUPTWAFFE: Giftklauen\n> SEKUNDÄRWAFFE: Fleisch werfen\n> SPRINTEN: Tod vortäuschen\n> NACHLADEN: Schreien\n> BEIM SCHLAG AUF MENSCHEN: Verlangsamen\n> BEIM SCHLAG VON MENSCHEN: Auswurf von Gift"
+--LANGUAGE.controls_ghoul							= "> HAUPTWAFFE: Giftklauen\n> SEKUNDÄRWAFFE: Fleisch werfen\n> SPRINTEN: Tod vortäuschen\n> NACHLADEN: Schreien\n> BEIM SCHLAG AUF MENSCHEN: Verlangsamen\n> BEIM SCHLAG VON MENSCHEN: Auswurf von Gift" -- Outdated
 LANGUAGE.controls_headcrab							= "> HAUPTWAFFE: Sturzangriff\n> NACHLADEN: Vergraben"
 LANGUAGE.controls_fast_headcrab						= "> HAUPTWAFFE: Sturzangriff"
 LANGUAGE.controls_poison_headcrab					= "> HAUPTWAFFE: Sturzangriff\n> SEKUNDÄRWAFFE: Gift spucken\n> BEIM SCHLAG AUF MENSCHEN: Tödliches Gift\n> WENN GIFT AUGEN TRIFFT: Blind machen\n> NACHLADEN: Schreien"
 LANGUAGE.controls_the_tickle_monster				= "> HAUPTWAFFE: Elastische Klauen\n> SEKUNDÄRWAFFE: Stöhnen"
 LANGUAGE.controls_nightmare							= "> HAUPTWAFFE: Todesberührung\n> SEKUNDÄRWAFFE: Stöhnen"
-LANGUAGE.controls_pukepus							= "> HAUPTWAFFE: Erbrechen"
+--LANGUAGE.controls_pukepus							= "> HAUPTWAFFE: Erbrechen" -- Outdated
 LANGUAGE.controls_bonemesh							= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Blutbombe werfen"
 LANGUAGE.controls_wraith							= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Schreien\n> UNSICHTBARKEIT BASIEREND AUF BEWEGUNG UND SICHT"
-LANGUAGE.controls_flesh_beast						= "> HAUPTWAFFE: Klauen\n> SEKUNDÄRWAFFE: Kopfnuss"
-LANGUAGE.controls_chem_zombie						= "> BEIM TOD: Giftbombe"
-LANGUAGE.controls_shade								= "> HAUPTWAFFE: Heben\n> SEKUNDÄRWAFFE: Werfen"
+--LANGUAGE.controls_shade							= "> HAUPTWAFFE: Heben\n> SEKUNDÄRWAFFE: Werfen" -- Outdated
 
 -- The help file... Quite big! I wouldn't blame you if you didn't translate this part.
 LANGUAGE.help_cat_introduction						= "Einführung"

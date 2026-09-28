@@ -21,14 +21,15 @@ LANGUAGE.that_life									= "일생동안..."
 LANGUAGE.x_damage_to_barricades						= "%d 데미지를 바리케이드에 가함"
 LANGUAGE.x_damage_to_humans							= "%d 데미지를 인간에게 가함"
 LANGUAGE.x_brains_eaten								= "%d개의 뇌를 먹어치움"
+
 LANGUAGE.press_rmb_to_cycle_targets					= "오른쪽 클릭으로 타겟 변경"
 LANGUAGE.press_lmb_to_spawn_on_them					= "왼쪽 클릭으로 이 위치에서 부활"
 LANGUAGE.press_lmb_to_spawn							= "왼쪽 클릭으로 부활"
+
 LANGUAGE.observing_x								= "관칠 중: %s (%d)"
 LANGUAGE.waiting_for_next_wave						= "다음 웨이브가 시작되길 기다리는 중..."
 LANGUAGE.impossible									= "불가능하다."
 LANGUAGE.trying_to_put_nails_in_glass				= "맙소사! 내가 유리에 못을 박으려 했어!"
-
 LANGUAGE.boss_class_select							= "다음부터는 %s(으)로 부활하게 된다."
 LANGUAGE.person_has_weapon							= "이미 그 무기를 가지고 있다."
 LANGUAGE.cant_do_that_in_classic_mode				= "클래식 모드에선 불가능하다."
@@ -52,16 +53,13 @@ LANGUAGE.you_were_killed_by_x						= "%s에게 살해당함"
 LANGUAGE.you_were_kicked_by_x						= "%s이(가) 정강이를 걷어참"
 LANGUAGE.arsenal_upgraded							= "무기고에 추가됨"
 LANGUAGE.final_wave									= "마지막 웨이브가 시작되었다!"
-
 LANGUAGE.final_wave_sub								= "모든 좀비가 풀려났고, 이제부터 성불할 수 없다!"
 LANGUAGE.wave_x_has_begun							= "%d번째 웨이브가 시작됐다!"
-LANGUAGE.x_unlocked									= "%s이(가) 풀려났다!"
 LANGUAGE.wave_x_is_over								= "%d번째 웨이브가 끝났다."
-
-LANGUAGE.wave_x_is_over_sub							= "좀비들의 습격이 지연됐고, 상점에서 %d%% 할인된 가격으로 물품을 판매중이다."
+--LANGUAGE.wave_x_is_over_sub						= "좀비들의 습격이 지연됐고, 상점에서 %d%% 할인된 가격으로 물품을 판매중이다." -- Outdated
 LANGUAGE.you_are_x									= "%s(으)로 부활했다!"
 LANGUAGE.x_has_risen_as_y							= "%s이(가) %s(으)로 부활했다!!"
-LANGUAGE.x_has_risen								= "%s이(가) 나타났다!"
+--LANGUAGE.x_has_risen								= "%s이(가) 나타났다!" -- Outdated
 LANGUAGE.cant_use_worth_anymore						= "더는 자금을 사용할 수 없다!"
 LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "해당 좀비는 아직 풀려나지 않았다. %d웨이브 이후에 풀려난다."
 LANGUAGE.you_are_already_a_x						= "이미 %s이다."
@@ -98,7 +96,6 @@ LANGUAGE.loading									= "로딩 중..."
 LANGUAGE.next_round_in_x							= "다음 라운드까지: %s"
 LANGUAGE.warning									= "경고!"
 LANGUAGE.ok_and_no_reminder							= "응, 다시 띄우지 마"
-
 LANGUAGE.classic_mode_warning						= "이 서버는 '클래식 모드'에서 작동 중이다.\n클래식 모드에선 게임 방식에 커다란 변화가 생깁니다. 바뀌는 점:\n* 좀비 종류를 변경할 수 없다. 모든 좀비는 클래식 좀비를 사용하게 된다.\n* 못, 터렛과 같은 바리케이딩 툴을 사용할 수 없다.\n* 웨이브가 더 많지만, 더 빨리 진행된다.\n\n그렇다고 해서 이 모드가 오리지널 좀비 서바이벌 모드는 아닙니다!\n\n-- 클래식 모드에서 운영 중인 서버는 왼쪽 아래에 클래식 모드 표시가 보이다 --"
 LANGUAGE.classic_mode								= "클래식 모드"
 LANGUAGE.resist_x									= "저항력: %d%%"
@@ -110,14 +107,6 @@ LANGUAGE.integrity_x								= "내구도: %d%%"
 LANGUAGE.empty										= "비어 있음"
 LANGUAGE.manual_control								= "수동 조작"
 LANGUAGE.arsenal_crate								= "상점 상자"
-
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "좀비들이 출구를 부쉈다!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "마지막 하나만이 남았다! 만약 이마저 부서진다면 더 이상의 희망은 없다!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "마지막 하나만이 남았다!"
-LANGUAGE.exit_destroyed_x_remain					= "%d개의 출구가 남아있음."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "좀비들이 마지막 출구를 부숴버렸다."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "더 이상의 아무런 희망이 없다."
 
 -- Message beacon messages
 LANGUAGE.message_beacon_1							= "여기서 만나자"
@@ -167,9 +156,7 @@ LANGUAGE.class_wilowisp								= "Wil O' Wisp"
 LANGUAGE.class_zombie_torso							= "좀비 몸통"
 LANGUAGE.class_zombie_legs							= "좀비 다리"
 LANGUAGE.class_wraith								= "망령"
-LANGUAGE.class_flesh_beast							= "감염된 맹수"
 LANGUAGE.class_fast_zombie_legs						= "패스트 좀비 다리"
-LANGUAGE.class_chem_zombie							= "챔 좀비"
 LANGUAGE.class_shade								= "셰이드"
 
 -- Class descriptions
@@ -189,36 +176,25 @@ LANGUAGE.description_crow							= "[데이터 말소]"
 LANGUAGE.description_wilowisp						= "Sometimes referred to as spirits of the dead."
 LANGUAGE.description_zombie_torso					= "You shouldn't even be seeing this."
 LANGUAGE.description_zombie_legs					= "You shouldn't even be seeing this."
-
 LANGUAGE.description_wraith							= "좀비, 혹은 유령?\n이 개체에 대해서는 알려진 것이 많지 않지만\n망령만의 특별한 스텔스 기능과 날카로운 손톱은 세상의 어떤 유령보다 강력하다."
-LANGUAGE.description_flesh_beast					= "*pending*"
 LANGUAGE.description_fast_zombie_legs				= "You shouldn't even be seeing this."
-
-
-LANGUAGE.description_chem_zombie					= "챔 좀비의 몸은 각종 독성 화학물질로 구성되어 있다.\n챔 좀비는 공격할 수 없지만,\n죽을 때에 강력한 폭발을 일으켜 주변의 모든 인간 및 바리케이드에 데미지를 가한다."
 LANGUAGE.description_shade							= "자신의 주변에 강력한 자기장을 형성하므로써, 모든 공격을 무효화시킨다.\n그러나 어떤 이유에선지 강한 빛에 약한 모습을 보인다."
 
 -- Class control schemes
-
 LANGUAGE.controls_zombie							= "> 공격 1: 할큄\n> 공격 2: 울부짖음\n> 재장전: 신음\n> 달리기: 죽은척 함\n> 다리에 치명적 공격을 받았을 시: 부활 / 변형"
 LANGUAGE.controls_poison_zombie						= "> 공격 1: 할큄\n> 공격 2: 살점 던지기\n> 재장전: 울부짖음"
 LANGUAGE.controls_fast_zombie						= "> 공격 1: 할큄\n> 공격 2: 달려듦 / 벽 타기 (벽 앞에서)\n> 재장전: 울부짖음"
 LANGUAGE.controls_bloated_zombie					= "> 공격 1: 할큄\n> 공격 2: 신음\n> 달리기: 죽은척 함\n> 죽을 때: 독 쐐기"
-
-LANGUAGE.controls_ghoul								= "> 공격 1: 독 할큄\n> 공격 2: 살점 던지기\n> 달리기: 죽은척 함\n> 재장전: 울부짖음\n> 인간을 맞췄을 시: 대상 느려짐\n> 인간에게 공격받을 시: 독 주입"
+--LANGUAGE.controls_ghoul							= "> 공격 1: 독 할큄\n> 공격 2: 살점 던지기\n> 달리기: 죽은척 함\n> 재장전: 울부짖음\n> 인간을 맞췄을 시: 대상 느려짐\n> 인간에게 공격받을 시: 독 주입" -- Outdated
 LANGUAGE.controls_headcrab							= "> 공격 1: 달려듦 \n> 재장전: 버로우"
 LANGUAGE.controls_fast_headcrab						= "> 공격 1: 달려듦 "
-
 LANGUAGE.controls_poison_headcrab					= "> 공격 1: 달려듦 \n> 공격 2: 독 발사\n> 인간을 맞췄을 시: 상태이상 '독'\n> 눈에 적중 시: 일시 실명\n> 재장전: 울부짖음"
 LANGUAGE.controls_the_tickle_monster				= "> 공격 1: 늘어나며 할큄\n> 공격 2: 신음"
 LANGUAGE.controls_nightmare							= "> 공격 1: 할큄\n> 공격 2: 신음"
-LANGUAGE.controls_pukepus							= "> 공격 1: 토함"
+--LANGUAGE.controls_pukepus							= "> 공격 1: 토함" -- Outdated
 LANGUAGE.controls_bonemesh							= "> 공격 1: 할큄\n> 공격 2: 피 폭탄 던짐"
-
 LANGUAGE.controls_wraith							= "> 공격 1: 할큄\n> 공격 2: 울부짖음\n> 패시브: 이동과 거리에 따른 투명도 변화"
-LANGUAGE.controls_flesh_beast						= "> 공격 1: 할큄\n> 공격 2: 박치기"
-LANGUAGE.controls_chem_zombie						= "> 죽을 때: 독 폭탄"
-LANGUAGE.controls_shade								= "> 공격 1: 들기\n> 공격 2: 던지기"
+--LANGUAGE.controls_shade							= "> 공격 1: 들기\n> 공격 2: 던지기" -- Outdated
 
 -- The help file... Quite big! I wouldn't blame you if you didn't translate this part.
 LANGUAGE.help_cat_introduction						= "좀비 서바이벌"
@@ -226,7 +202,6 @@ LANGUAGE.help_cat_survival							= "서바이벌"
 LANGUAGE.help_cat_barricading						= "바리케이딩"
 LANGUAGE.help_cat_upgrades							= "업그레이드"
 LANGUAGE.help_cat_being_a_zombie					= "좀비"
-
 LANGUAGE.help_cont_introduction						= [[<p>    좀비 대재앙을 경험할 수 있게 해주는 좀비 서바이벌에 오신 것을 환영한다! 여러분은 이제 바리케이드를 짓고, 좀비를 박살 내며, 언데드들과 전쟁을 벌일 수 있다.</p>
 <p>좀비 서바이벌에는 생존자와 좀비라는 두 팀이 있다. 생존자, 즉 인간은 모든 웨이브를 버티면 승리하게 된다. 어떤 맵들은 승리하기 위해 특별한 미션을 수행해야 하는 경우도 있다.
 만약 인간이 죽는다면, 좀비로 되살아나 생존자의 생존이 훨씬 힘들어지게 된다. 협력을 잘해야 유리하다는 말이죠.</p>
@@ -269,7 +244,6 @@ LANGUAGE.help_cont_survival							= [[<p>팁:
 <li>비록 좀비의 다리에 데미지가 적게 들어갈지라도, 다리에 공격을 받으면 느려지는 효과가 있다. 위급한 상황이라면, 다리를 집중 사격하고 팀원과 함께 도망치세요.</li>
 </ul></p>
 ]]
-
 LANGUAGE.help_cont_barricading						= [[<p>바리케이딩은 생존에 절대로 없어서는 안 될 행위이다. 좀비들은 처음엔 약해 보이나 후반으로 갈수록 순식간에 팀 전체를 죽일 수 있을 정도로 강력해지기 때문이다.</p>
 <p>좀비를 들어오지 못하게 하는 유일한 방법은, 잘 지어진 바리케이드와 잘 짜인 전술로 대응하는 것이다.</p>
 <p>좀비 서바이벌엔 바리케이드를 구성하기 위한 한 짝의 도구가 있다. 바로 '목수의 망치'와 '못'이다. 이들은 프롭을 단단히 고정해 주며, 좀비들은 이 튼튼한 바리케이드를 부수지 않고는 당신에게 아무런 위해를 가하지 못한다.

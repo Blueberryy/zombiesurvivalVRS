@@ -22,9 +22,11 @@ LANGUAGE.that_life									= "En que vida..."
 LANGUAGE.x_damage_to_barricades						= "%d daño a las barricadas"
 LANGUAGE.x_damage_to_humans							= "%d daño a las humanos"
 LANGUAGE.x_brains_eaten								= "%d cerebro comido"
+
 LANGUAGE.press_rmb_to_cycle_targets					= "Pulsa RMB para rotar blancos"
 LANGUAGE.press_lmb_to_spawn_on_them					= "Pulsa LMB para que desovar aqui"
 LANGUAGE.press_lmb_to_spawn							= "Pulsa LMB para que desovar"
+
 LANGUAGE.observing_x								= "Observando %s (%d)"
 LANGUAGE.waiting_for_next_wave						= "Espera por la próxima onda para comenzar ..."
 LANGUAGE.impossible									= "Imposible"
@@ -53,12 +55,11 @@ LANGUAGE.arsenal_upgraded							= "Arsenal es mejorada"
 LANGUAGE.final_wave									= "LA ONDA FINAL HA COMENZANDO!"
 LANGUAGE.final_wave_sub								= "Todas las clases desbloquea y la oportunidad de redención ha terminado!"
 LANGUAGE.wave_x_has_begun							= "Onda %d has empezar!"
-LANGUAGE.x_unlocked									= " %s desbloqueado!"
 LANGUAGE.wave_x_is_over								= "Onda %d se ha acabado!"
-LANGUAGE.wave_x_is_over_sub							= "Los muertos vivientes han dejado de subir y el saldo de Puntos de Compra es %d%%"
+--LANGUAGE.wave_x_is_over_sub					    = "Los muertos vivientes han dejado de subir y el saldo de Puntos de Compra es %d%%" -- Outdated
 LANGUAGE.you_are_x									= "Tu eres %s!"
 LANGUAGE.x_has_risen_as_y							= "%s ha sido resucitado como %s!!"
-LANGUAGE.x_has_risen								= "%s ha sido resucitado!"
+--LANGUAGE.x_has_risen								= "%s ha sido resucitado!" -- Outdated
 LANGUAGE.cant_use_worth_anymore						= "No se puede utilizar el Worth Menu nunca más!"
 LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "Esa clase no se desbloquea todavía. Será desbloqueado en el inicio de la onda %d."
 LANGUAGE.you_are_already_a_x						= "Usted ya eres una %s."
@@ -107,14 +108,6 @@ LANGUAGE.empty										= "VACÍO"
 LANGUAGE.manual_control								= "CONTROL MANUAL"
 LANGUAGE.arsenal_crate								= "Cajón de Arsenal"
 
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "Los muertos vivientes han destruido una salida!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "Sólo queda uno! Si se cae, entonces no hay esperanza de escapar!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "Sólo queda uno!"
-LANGUAGE.exit_destroyed_x_remain					= "%d resto de salidas."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "The zombies have destroyed the last exit."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "No hay esperanza para escapar."
-
 -- Message beacon messages
 LANGUAGE.message_beacon_1							= "Reunirse aquí"
 LANGUAGE.message_beacon_2							= "Necesitamos defensa aquí"
@@ -142,7 +135,6 @@ LANGUAGE.message_beacon_23							= "Los zombis se abren paso aquí!"
 LANGUAGE.message_beacon_24							= "Zombies están llegando. Construir una barricada!"
 LANGUAGE.message_beacon_25							= "Plan B aquí"
 
-
 -- Class names
 LANGUAGE.class_zombie								= "Zombie"
 LANGUAGE.class_poison_zombie						= "Zombie Venenoso"
@@ -164,11 +156,8 @@ LANGUAGE.class_wilowisp								= "Wil O' Wisp"
 LANGUAGE.class_zombie_torso							= "Torso"
 LANGUAGE.class_zombie_legs							= "Piernas"
 LANGUAGE.class_wraith								= "Fantasma"
-LANGUAGE.class_flesh_beast							= "Bestia de Carne"
 LANGUAGE.class_fast_zombie_legs						= "Piernas Rápidas"
-LANGUAGE.class_chem_zombie							= "Zombie Químico"
 LANGUAGE.class_shade								= "Sombra"
-
 
 -- Class descriptions
 LANGUAGE.description_zombie							= "El zombie básico es muy resistente y tiene poderosas garras.\nEs difícil mantener bajos, especialmente si no disparó en la cabeza."
@@ -188,9 +177,7 @@ LANGUAGE.description_wilowisp						= "Algunas veces conocido como espíritus de 
 LANGUAGE.description_zombie_torso					= "No se supone que ver esto ..."
 LANGUAGE.description_zombie_legs					= "No se supone que ver esto ..."
 LANGUAGE.description_wraith							= "¿Un zombi o una aparición?\nNo mucho se sabe sobre él, olvidar el hecho de que utiliza su\ncapacidad de sigilo único y garras afiladas para cortar las cosas en pedazos."
-LANGUAGE.description_flesh_beast					= "*Pending*"
 LANGUAGE.description_fast_zombie_legs				= "No se supone que ver esto ..."
-LANGUAGE.description_chem_zombie					= "El cuerpo de Chem Zombie está totalmente consistir de volátil, productos químicos.\nNo tiene medios para atacar pero explota cuando murieron, con la esperanza de matar a los humanos cercanos."
 LANGUAGE.description_shade							= "Creación de un campo magnético a su alrededor, todos los ataques cuerpo a cuerpo de bala y son inútiles contra él.\nPero, por alguna razón, la sombra es vulnerable a la luz brillante."
 
 -- Class control schemes
@@ -198,15 +185,13 @@ LANGUAGE.controls_zombie							= "> PRIMARIO: Garras\n> SECUNDARIO: Gritar\n> RE
 LANGUAGE.controls_poison_zombie						= "> PRIMARIO: Garras\n> SECUNDARIO: Tirar Carne\n> RECARGAR: Gritar"
 LANGUAGE.controls_fast_zombie						= "> PRIMARIO: Garras\n> SECUNDARIO: Saltar / Trepar (Al lado de una pared)\n> RECARGAR: Gritar"
 LANGUAGE.controls_bloated_zombie					= "> PRIMARIO: Garras\n> SECUNDARIO: Gemido\n> SPRINT: Fingir muerte\n> EN MUERTE: Sangre Veneno"
-LANGUAGE.controls_ghoul								= "> PRIMARIO: Garras\n> SECUNDARIO: Tirar carne\n> SPRINT: Fingir muerte\n> RECARGAR: Gritar\n> CUANDO ALCANZA HUMANO: Lento\n> ALCANZADO POR HUMANOS: Liberación veneno"
+--LANGUAGE.controls_ghoul							= "> PRIMARIO: Garras\n> SECUNDARIO: Tirar carne\n> SPRINT: Fingir muerte\n> RECARGAR: Gritar\n> CUANDO ALCANZA HUMANO: Lento\n> ALCANZADO POR HUMANOS: Liberación veneno" -- Outdated
 LANGUAGE.controls_headcrab							= "> PRIMARIO: Saltar ataque\n> RECARGAR: Cavar"
 LANGUAGE.controls_fast_headcrab						= "> PRIMARIO: Saltar ataque"
 LANGUAGE.controls_poison_headcrab					= ">PRIMARIO: Saltar ataque\n> SECUNDARIO: Escupir veneno\n> CUANDO ALCANZA HUMANO: Veneno mortífero\n> CUANDO ALCANZA LOS OJOS: Ceguera\n> RECARGAR: Gritar"
 LANGUAGE.controls_the_tickle_monster				= ">PRIMARIO: Garras elástica\n SECUNDARIO: Gemido"
 LANGUAGE.controls_nightmare							= ">PRIMARIO: Toque mortal\n> SECUNDARIO: Gemido"
-LANGUAGE.controls_pukepus							= ">PRIMARIO: Vómito"
+--LANGUAGE.controls_pukepus							= ">PRIMARIO: Vómito" -- Outdated
 LANGUAGE.controls_bonemesh							= "> PRIMARIO: Garras\n> SECUNDARIO: Tirar bomba de sangre"
 LANGUAGE.controls_wraith							= "> PRIMARIO: Garras\n> SECUNDARIO: Gritar"
-LANGUAGE.controls_flesh_beast						= "> PRIMARIO: Garras\n> SECUNDARIO: Batir con la cabeza"
-LANGUAGE.controls_chem_zombie						= "> EN MUERTE: Bomba veneno"
-LANGUAGE.controls_shade								= "> PRIMARIO: Subir\n SEGUNDARIO: Tirar"
+--LANGUAGE.controls_shade							= "> PRIMARIO: Subir\n SEGUNDARIO: Tirar" -- Outdated

@@ -585,7 +585,7 @@ LANGUAGE.wpn_desc_meattenderizer					= "A slow swinging meat tenderizer with not
 
 -- Medical Kit
 LANGUAGE.wpn_name_medicalkit						= "Medical Kit"
-LANGUAGE.wpn_desc_medicalkit						= "An advanced kit of medicine, bandages, and morphine.\nVery useful for keeping a group of survivors healthy.\nUse {bind:+attack|PRIMARY ATTACK}} to heal other players.\nUse {{bind:+attack2|SECONDARY ATTACK}} to heal yourself.\nHealing other players is not only faster but you get a nice point bonus!"
+LANGUAGE.wpn_desc_medicalkit						= "An advanced kit of medicine, bandages, and morphine.\nVery useful for keeping a group of survivors healthy.\nUse {{bind:+attack|PRIMARY ATTACK}} to heal other players.\nUse {{bind:+attack2|SECONDARY ATTACK}} to heal yourself.\nHealing other players is not only faster but you get a nice point bonus!"
 LANGUAGE.wpn_name_medicalkit_branch_1				= "Restoration Kit"
 LANGUAGE.wpn_desc_medicalkit_branch_1				= "Always uses the same amount of ammo, increased cooldown."
 

@@ -990,7 +990,7 @@ function GM:DrawSigilTeleportBar(x, y, fraction, target, screenscale)
 	surface_DrawOutlinedRect(startx, y, maxbarwidth, barheight)
 
 	draw_SimpleText(translate.Format("teleporting_to_sigil", letter), "ZSHUDFontSmall", x, y - draw_GetFontHeight("ZSHUDFontSmall") - 2, colSigilTeleport, TEXT_ALIGN_CENTER)
-	draw_SimpleText(translate.Format("press_x_to_cancel", translate.GetBindKeyName("+speed")), "ZSHUDFontSmaller", x, y + draw_GetFontHeight("ZSHUDFontSmaller") - 16, colSigilTeleport, TEXT_ALIGN_CENTER)
+	draw_SimpleText(translate.Get("press_x_to_cancel"), "ZSHUDFontSmall", x, y + draw_GetFontHeight("ZSHUDFontSmaller") - 16, colSigilTeleport, TEXT_ALIGN_CENTER)
 	draw_SimpleText(translate.Get("point_at_a_sigil_to_choose_destination"), "ZSHUDFontSmaller", x, y + draw_GetFontHeight("ZSHUDFontSmaller") * 2 - 16, colSigilTeleport, TEXT_ALIGN_CENTER)
 end
 
@@ -1134,13 +1134,13 @@ function GM:ZombieObserverHUD(obsmode)
 	local x, y = w / 2, h * 0.68
 
 	if self:GetWaveActive() then
-		draw_SimpleTextBlurry(translate.Format("press_x_to_spawn", translate.GetBindKeyName("+attack", "LMB")), "ZSHUDFontSmall", x, y, COLOR_GRAY, TEXT_ALIGN_CENTER)
-		draw_SimpleTextBlurry(translate.Format("press_x_to_spawn_close", translate.GetBindKeyName("+attack2", "RMB")), "ZSHUDFontSmall", x, y + space, COLOR_GRAY, TEXT_ALIGN_CENTER)
-		draw_SimpleTextBlurry(translate.Format("press_x_to_spawn_far", translate.GetBindKeyName("+reload", "RELOAD")), "ZSHUDFontSmall", x, y + space * 2, COLOR_GRAY, TEXT_ALIGN_CENTER)
-		draw_SimpleTextBlurry(translate.Format("press_x_nest_menu", translate.GetBindKeyName("+walk")), "ZSHUDFontSmaller", x, y + space * 4, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Get("press_x_to_spawn"), "ZSHUDFontSmall", x, y, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Get("press_x_to_spawn_close"), "ZSHUDFontSmall", x, y + space, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Get("press_x_to_spawn_far"), "ZSHUDFontSmall", x, y + space * 2, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Get("press_x_nest_menu"), "ZSHUDFontSmaller", x, y + space * 4, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 
-	draw_SimpleTextBlurry(translate.Format("press_x_to_free_roam", translate.GetBindKeyName("+jump", "JUMP")), "ZSHUDFontSmall", x, y + space * 3, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	draw_SimpleTextBlurry(translate.Get("press_x_to_free_roam"), "ZSHUDFontSmall", x, y + space * 3, COLOR_GRAY, TEXT_ALIGN_CENTER)
 end
 
 local colLifeStats = Color(255, 50, 50, 255)

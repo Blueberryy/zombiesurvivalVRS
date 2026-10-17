@@ -8,6 +8,8 @@ translate.AddLanguage("en", "English")
 LANGUAGE.infliction_reached_class_unlocked			= "%d%% infliction has been reached! %s unlocked!"
 LANGUAGE.press_rmb_to_cycle_targets					= "Press RMB to cycle targets"
 LANGUAGE.press_lmb_to_spawn_on_them					= "Press LMB to spawn on them"
+LANGUAGE.press_reload_to_spawn_at_normal_point		= "Press RELOAD to spawn at a normal spawn point"
+LANGUAGE.press_x_to_spawn_as_x						= "Press %1$s to spawn as a %2$s"
 LANGUAGE.press_left_and_right_to_cycle_targets		= "Press STRAFE LEFT and STRAFE RIGHT to cycle targets"
 LANGUAGE.right_click_to_hammer_nail					= "Right click to hammer in a nail."]]
 

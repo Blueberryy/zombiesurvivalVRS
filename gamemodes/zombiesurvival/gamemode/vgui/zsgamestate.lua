@@ -223,9 +223,6 @@ end
 function PANEL:GetText1String()
     local override = MySelf:IsValid() and GetGlobalString("hudoverride"..MySelf:Team(), "")
     if override and #override > 0 then
-        -- Строка была записана на сервере как source-текст карты.
-        -- Клиент переводит её через translate.MapText, используя
-        -- активную версию карты для своего языка (gmod_language).
         return translate.MapText(override)
     end
 

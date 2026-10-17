@@ -25,7 +25,7 @@ LANGUAGE.x_damage_to_barricades						= "%d daño a las barricadas"
 LANGUAGE.x_damage_to_humans							= "%d daño a las humanos"
 LANGUAGE.x_brains_eaten								= "%d cerebro comido"
 
-LANGUAGE.press_x_to_spawn							= "Pulsa %s para que desovar"
+LANGUAGE.press_x_to_spawn							= "Pulsa {{bind:+attack|LMB}} para que desovar"
 LANGUAGE.observing_x								= "Observando %s (%d)"
 LANGUAGE.waiting_for_next_wave						= "Espera por la próxima onda para comenzar ..."
 LANGUAGE.impossible									= "Imposible"

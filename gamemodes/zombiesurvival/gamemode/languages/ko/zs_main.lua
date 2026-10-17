@@ -25,7 +25,7 @@ LANGUAGE.x_damage_to_barricades						= "%d 데미지를 바리케이드에 가�
 LANGUAGE.x_damage_to_humans							= "%d 데미지를 인간에게 가함"
 LANGUAGE.x_brains_eaten								= "%d개의 뇌를 먹어치움"
 
-LANGUAGE.press_x_to_spawn							= "%s(을)를 눌러 부활"
+LANGUAGE.press_x_to_spawn							= "{{bind:+attack|LMB}}(을)를 눌러 부활"
 LANGUAGE.observing_x								= "관칠 중: %s (%d)"
 LANGUAGE.waiting_for_next_wave						= "다음 웨이브가 시작되길 기다리는 중..."
 LANGUAGE.impossible									= "불가능하다."
@@ -36,7 +36,7 @@ LANGUAGE.cant_do_that_in_classic_mode				= "클래식 모드에선 불가능하�
 LANGUAGE.cant_use_x_in_classic_mode					= "클래식 모드에선 %s을(를) 사용할 수 없다."
 LANGUAGE.cant_use_x_in_zombie_escape				= "좀비 탈출에서는 %s을(를) 사용할 수 없다."
 LANGUAGE.no_class_switch_in_this_mode				= "현재 모드는 클래스 변경을 지원하지 않는다."
-LANGUAGE.press_x_to_get_up							= "%s(을)를 눌러 일어남"
+LANGUAGE.press_x_to_get_up							= "{{bind:+speed|SPRINT}}(을)를 눌러 일어남"
 LANGUAGE.zombie_escape								= "[좀비 탈출]"
 LANGUAGE.nothing_for_this_ammo						= "이 탄환을 사용할 수 있는 총기가 없다."
 LANGUAGE.you_decide_to_leave_some					= "팀원을 위해 남겨두기로 정했다."

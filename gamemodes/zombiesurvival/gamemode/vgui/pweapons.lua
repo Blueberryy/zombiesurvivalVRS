@@ -196,7 +196,7 @@ function MakepWeapons(silent)
 	searchEntry:SetUpdateOnType(true)
 	searchEntry:SetKeyboardInputEnabled(true)
 	searchEntry:SetMouseInputEnabled(true)
-	searchEntry:SetPlaceholderText("Search...")
+	searchEntry:SetPlaceholderText(translate.Get("weapon_database_search"))
 	searchEntry:SetPlaceholderColor(Color(130, 130, 130, 255))
 
 	searchEntry.OnValueChange = function(_, text)
@@ -211,16 +211,12 @@ function MakepWeapons(silent)
 		end)
 	end
 
-	-- Белый фон рисуем на родителе (searchRow), а не внутри DTextEntry.
-	-- Переопределение DTextEntry:Paint ломает каретку, выделение и ввод.
 	searchRow.Paint = function(me, w, h)
-		-- Белая подложка ровно под полем ввода
 		draw.RoundedBox(2, catBtnW + 4, 0, searchW, h, Color(255, 255, 255, 255))
 		surface.SetDrawColor(120, 120, 120, 255)
 		surface.DrawOutlinedRect(catBtnW + 4, 0, searchW, h)
 	end
 
-	-- Кнопка сортировки.
 	local sortBtn = vgui.Create("DButton", searchRow)
 	sortBtn:SetText("")
 	sortBtn:SetPos(catBtnW + 4 + searchW + 4, 0)
@@ -236,7 +232,7 @@ function MakepWeapons(silent)
 	sortLabel:SetTextColor(color_white)
 	sortLabel:SetContentAlignment(5)
 	sortLabel:SetScrollingMode("time")
-	sortLabel:SetText("Sort: A - Z")
+	sortLabel:SetText(translate.Get("weapon_database_sort_az"))
 	sortLabel:Dock(FILL)
 	sortLabel:SetMouseInputEnabled(false)
 
@@ -246,7 +242,7 @@ function MakepWeapons(silent)
 
 	sortBtn.DoClick = function()
 		frame.WeaponSortDesc = not frame.WeaponSortDesc
-		sortLabel:SetText(frame.WeaponSortDesc and "Sort: Z - A" or "Sort: A - Z")
+		sortLabel:SetText(frame.WeaponSortDesc and translate.Get("weapon_database_sort_za") or translate.Get("weapon_database_sort_az"))
 		frame:RebuildWeaponTrees()
 	end
 
@@ -308,17 +304,17 @@ function MakepWeapons(silent)
 	GAMEMODE:ConfigureMenuTabs(tabs, tabhei)
 
 	frame.ViewerY = y
-	
-	-- ============================================================
-	-- Category dropdown
-	-- ------------------------------------------------------------
-	-- Меню строится по активной вкладке. Если в "Изготовляемое"
-	-- нет Deployables, эта категория не появится в списке.
-	-- ============================================================
+
 	local catMenu
+	local catMenuCloser
 	local function CloseCatMenu()
 		if IsValid(catMenu) then catMenu:Remove() end
 		catMenu = nil
+		if IsValid(catMenuCloser) then catMenuCloser:Remove() end
+		catMenuCloser = nil
+		if IsValid(frame) then
+			frame:MakePopup()
+		end
 	end
 
 	local function GetActiveTabData()
@@ -328,7 +324,7 @@ function MakepWeapons(silent)
 		return weaponData
 	end
 
-	local function UpdateCatLabel()
+		local function UpdateCatLabel()
 		local cat = frame.WeaponCatFilter
 		if cat and GAMEMODE.ItemCategories[cat] then
 			catLabel:SetText(translate.Get(GAMEMODE.ItemCategories[cat]))
@@ -337,6 +333,38 @@ function MakepWeapons(silent)
 		end
 	end
 	UpdateCatLabel()
+
+	-- ============================================================
+	-- Reset the category filter when switching tabs, if the selected
+	-- category is not on the new tab.
+	-- ============================================================
+	propertysheet.OnActiveTabChanged = function(self, old, new)
+		-- Wait for one frame so that VGUI has time to update the visibility of the panels
+        -- and GetActiveTabData() returns the correct data array.
+		timer.Simple(0, function()
+			if not IsValid(frame) then return end
+			
+			local data = GetActiveTabData()
+			local cat = frame.WeaponCatFilter
+
+			if cat ~= nil then
+				local found = false
+				for _, d in ipairs(data) do
+					if d.category == cat then
+						found = true
+						break
+					end
+				end
+
+				-- If the selected category isn't on the new tab, reset to “All”
+				if not found then
+					frame.WeaponCatFilter = nil
+					UpdateCatLabel()
+					frame:RebuildWeaponTrees()
+				end
+			end
+		end)
+	end
 
 	local function OpenCatMenu()
 		CloseCatMenu()
@@ -356,15 +384,32 @@ function MakepWeapons(silent)
 			end
 		end
 
+		catMenuCloser = vgui.Create("EditablePanel") 
+		catMenuCloser:SetSize(ScrW(), ScrH())
+		catMenuCloser:SetPos(0, 0)
+		catMenuCloser:SetMouseInputEnabled(true)
+		catMenuCloser:SetKeyboardInputEnabled(false)
+		catMenuCloser.Paint = function() end
+		catMenuCloser.OnMousePressed = function(self, mc)
+			CloseCatMenu()
+			return true
+		end
+		catMenuCloser.Think = function(self)
+			if not IsValid(frame) or not frame:IsVisible() then
+				CloseCatMenu()
+			end
+		end
+		catMenuCloser:MakePopup()
+
 		local rowH = 22 * screenscale
-		local menu = vgui.Create("DPanel", frame)
+		local menu = vgui.Create("DPanel", catMenuCloser)
 		menu:SetMouseInputEnabled(true)
 		menu:SetKeyboardInputEnabled(false)
-		menu:SetZPos(100)
+		menu:SetZPos(32768)
 		menu:SetSize(catBtnW, #entries * rowH + 4)
 
-		local bx = searchRow:GetX() + catBtn:GetX()
-		local by = searchRow:GetY() + catBtn:GetY() + catBtn:GetTall() + 2
+		local bx, by = catBtn:LocalToScreen(0, 0)
+		by = by + catBtn:GetTall() + 2
 		menu:SetPos(bx, by)
 
 		menu.Paint = function(me, w, h)

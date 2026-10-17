@@ -433,7 +433,7 @@ ZS_MixedFonts = {
 
 hook.Add("InitPostEntity", "ZS_CreateMixedFonts", function()
     local ss  = BetterScreenScale()
-    local GFA = "ghoulish_fright_aoe_v2"
+    local GFA = "ghoulish_fright_aoe_v2.1"
 
     -- Same fallback as in cl_fontfallback.lua.
     -- For Russian = Tahoma, for Chinese = Microsoft YaHei etc.

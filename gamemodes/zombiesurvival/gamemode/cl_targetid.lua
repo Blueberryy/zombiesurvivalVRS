@@ -115,7 +115,7 @@ function GM:DrawSigilTargetHint(ent, fade)
 
 	if GAMEMODE:NumSigils() > 1 then
 		y = y + draw.GetFontHeight("ZSHUDFontSmaller") + 0
-		draw.SimpleTextBlur(translate.Format("targetid_sigil_teleport", translate.GetBindKeyName("+use", "E")), ZS_TinyFontWithOutline(), x, y, colTemp, TEXT_ALIGN_CENTER)
+		draw.SimpleTextBlur(translate.Format("targetid_sigil_teleport", translate.GetBindKeyName("+use")), ZS_TinyFontWithOutline(), x, y, colTemp, TEXT_ALIGN_CENTER)
 	end
 end
 

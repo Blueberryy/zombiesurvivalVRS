@@ -344,7 +344,8 @@ function PANEL:CreateDescLabels()
         local label = vgui.Create("DLabel", self)
         local notwaveone = classtable.Wave and classtable.Wave > 0
 
-        label:SetText(line)
+        label:SetText(translate.InterpolateBindNames(line)) 
+        
         if i == (notwaveone and 2 or 1) and classtable.BetterVersion then
             label:SetColor(COLOR_RORANGE)
         end

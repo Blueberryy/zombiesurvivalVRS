@@ -377,88 +377,88 @@ local REMORT_SKILL = {Name = "skill_remort_name", Description = "skill_remort_de
 -- filling the whole button area. The button's own text is cleared
 -- so the engine doesn't draw a duplicate on top of the label.
 local function ScrollingButton(parent, text, font, scrollMode)
-	local btn = vgui.Create("DButton", parent)
-	btn:SetText("")
+    local btn = vgui.Create("DButton", parent)
+    btn:SetText("")
 
-	btn.ScrollText      = text or ""
-	btn.ScrollFont      = font or "ZSHUDFontSmallest"
-	btn.ScrollColor     = color_white
-	btn.ScrollMode      = scrollMode or "time"
-	btn.ScrollTimeStart = RealTime()
+    btn.ScrollText      = text or ""
+    btn.ScrollFont      = font or "ZSHUDFontSmallest"
+    btn.ScrollMode      = scrollMode or "time"
+    btn.ScrollTimeStart = RealTime()
 
-	local basePaint = btn.Paint
-	btn.Paint = function(me, w, h)
-		if basePaint then basePaint(me, w, h) end
+    local basePaint = btn.Paint
+    btn.Paint = function(me, w, h)
+        if basePaint then basePaint(me, w, h) end
 
-		local txt = me.ScrollText
-		if not txt or txt == "" then return end
+        local txt = me.ScrollText
+        if not txt or txt == "" then return end
 
-		local f = me.ScrollFont
-		if type(f) ~= "string" then f = "ZSHUDFontSmallest" end
+        local f = me.ScrollFont
+        if type(f) ~= "string" then f = "ZSHUDFontSmallest" end
 
-		-- Safety: someone may have set me.ScrollColor to non-Color.
-		local col = me.ScrollColor
-		if type(col) ~= "Color" then col = color_white end
-		if me:GetDisabled() then
-			col = Color(col.r, col.g, col.b, col.a * 0.5)
-		end
+        local col
+        if me:GetDisabled() then
+            col = COLOR_DARKGRAY
+        elseif me:IsDown() then
+            col = COLOR_WHITE
+        elseif me:IsHovered() then
+            col = COLOR_WHITE
+        else
+            col = COLOR_GRAY
+        end
 
-		local tw
-		if ZS_MeasureMixedText then
-			tw = ZS_MeasureMixedText(txt, f)
-		else
-			surface.SetFont(f)
-			tw = surface.GetTextSize(txt)
-		end
+        local tw
+        if ZS_MeasureMixedText then
+            tw = ZS_MeasureMixedText(txt, f)
+        else
+            surface.SetFont(f)
+            tw = surface.GetTextSize(txt)
+        end
 
-		if tw <= w - 4 or me.ScrollMode ~= "time" then
-			draw.SimpleText(txt, f, w * 0.5, h * 0.5, col, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-			return
-		end
+        if tw <= w - 4 or me.ScrollMode ~= "time" then
+            draw.SimpleText(txt, f, w * 0.5, h * 0.5, col, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+            return
+        end
 
-		local travel     = tw - (w - 4)
-		local speed      = 40
-		local pause      = 1.2
-		local scrollTime = travel / speed
-		local cycle      = (scrollTime + pause) * 2
-		local t          = (RealTime() - me.ScrollTimeStart) % cycle
+        local travel     = tw - (w - 4)
+        local speed      = 40
+        local pause      = 1.2
+        local scrollTime = travel / speed
+        local cycle      = (scrollTime + pause) * 2
+        local t          = (RealTime() - me.ScrollTimeStart) % cycle
 
-		local frac
-		if t < pause then
-			frac = 0
-		elseif t < pause + scrollTime then
-			frac = (t - pause) / scrollTime
-		elseif t < pause + scrollTime + pause then
-			frac = 1
-		else
-			frac = 1 - (t - pause - scrollTime - pause) / scrollTime
-		end
+        local frac
+        if t < pause then
+            frac = 0
+        elseif t < pause + scrollTime then
+            frac = (t - pause) / scrollTime
+        elseif t < pause + scrollTime + pause then
+            frac = 1
+        else
+            frac = 1 - (t - pause - scrollTime - pause) / scrollTime
+        end
 
-		local x = 2 - travel * frac
-		local sx, sy = me:LocalToScreen(0, 0)
-		render.SetScissorRect(sx + 2, sy, sx + w - 2, sy + h, true)
-			draw.SimpleText(txt, f, x, h * 0.5, col, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-		render.SetScissorRect(0, 0, 0, 0, false)
-	end
+        local x = 2 - travel * frac
+        local sx, sy = me:LocalToScreen(0, 0)
+        render.SetScissorRect(sx + 2, sy, sx + w - 2, sy + h, true)
+            draw.SimpleText(txt, f, x, h * 0.5, col, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+        render.SetScissorRect(0, 0, 0, 0, false)
+    end
 
-	-- Proxy only the methods we actually need. SetFGColor is NOT
-	-- overridden — otherwise GMod's AccessorFunc mechanism might
-	-- pass a number or table in and ScrollColor becomes non-Color.
-	btn.SetText = function(me, t)
-		me.ScrollText      = tostring(t or "")
-		me.ScrollTimeStart = RealTime()
-	end
-	btn.GetText = function(me)
-		return me.ScrollText or ""
-	end
-	btn.SetFont = function(me, f)
-		me.ScrollFont = f or "ZSHUDFontSmallest"
-	end
-	btn.GetFont = function(me)
-		return me.ScrollFont or "ZSHUDFontSmallest"
-	end
+    btn.SetText = function(me, t)
+        me.ScrollText      = tostring(t or "")
+        me.ScrollTimeStart = RealTime()
+    end
+    btn.GetText = function(me)
+        return me.ScrollText or ""
+    end
+    btn.SetFont = function(me, f)
+        me.ScrollFont = f or "ZSHUDFontSmallest"
+    end
+    btn.GetFont = function(me)
+        return me.ScrollFont or "ZSHUDFontSmallest"
+    end
 
-	return btn
+    return btn
 end
 
 local PANEL = {}

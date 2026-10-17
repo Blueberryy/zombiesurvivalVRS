@@ -705,9 +705,15 @@ function GM:OpenInventory()
 	UpdateCategoryLabel()
 
 	local catMenu
+	local catMenuCloser
 	local function CloseCategoryMenu()
 		if IsValid(catMenu) then catMenu:Remove() end
 		catMenu = nil
+		if IsValid(catMenuCloser) then catMenuCloser:Remove() end
+		catMenuCloser = nil
+		if IsValid(frame) then
+			frame:MakePopup()
+		end
 	end
 
 	local function OpenCategoryMenu()
@@ -724,15 +730,32 @@ function GM:OpenInventory()
 			entries[#entries + 1] = {id = INVCAT_CONSUMABLES, label = translate.Get("inventory_category_consumables")}
 		end
 
+		catMenuCloser = vgui.Create("EditablePanel")
+		catMenuCloser:SetSize(ScrW(), ScrH())
+		catMenuCloser:SetPos(0, 0)
+		catMenuCloser:SetMouseInputEnabled(true)
+		catMenuCloser:SetKeyboardInputEnabled(false)
+		catMenuCloser.Paint = function() end
+		catMenuCloser.OnMousePressed = function(self, mc)
+			CloseCategoryMenu()
+			return true
+		end
+		catMenuCloser.Think = function(self)
+			if not IsValid(frame) or not frame:IsVisible() then
+				CloseCategoryMenu()
+			end
+		end
+		catMenuCloser:MakePopup()
+
 		local rowH = 22 * screenscale
-		local menu = vgui.Create("DPanel", frame)
+		local menu = vgui.Create("DPanel", catMenuCloser)
 		menu:SetMouseInputEnabled(true)
 		menu:SetKeyboardInputEnabled(false)
 		menu:SetZPos(100)
 		menu:SetSize(catBtnW, #entries * rowH + 4)
 
-		local bx = tabbar:GetX() + catBtn:GetX()
-		local by = tabbar:GetY() + catBtn:GetY() + catBtn:GetTall() + 2
+		local bx, by = catBtn:LocalToScreen(0, 0)
+		by = by + catBtn:GetTall() + 2
 		menu:SetPos(bx, by)
 
 		menu.Paint = function(me, w, h)

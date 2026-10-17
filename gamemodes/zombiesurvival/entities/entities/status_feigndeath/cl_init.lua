@@ -70,7 +70,7 @@ function ENT:DrawTranslucent()
 
 	cam.IgnoreZ(true)
 	cam.Start3D2D(pos, ang, 0.1)
-		draw.SimpleTextBlur(translate.Format("press_x_to_get_up", translate.GetBindKeyName("+speed", "SPRINT")), "ZS3D2DFont2Small", 0, 0, col, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw.SimpleTextBlur(translate.Get("press_x_to_get_up"), "ZS3D2DFont2Small", 0, 0, col, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	cam.End3D2D()
 	cam.IgnoreZ(false)
 end

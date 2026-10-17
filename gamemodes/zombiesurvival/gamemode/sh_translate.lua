@@ -863,14 +863,20 @@ function translate.Get(id, count)
     local entry, short = LookupTranslation(id)
     if entry == nil then return "@"..id.."@" end
 
-    -- Case-таблица: при обычном Get отдаём именительный (базовый).
+    local res
     if IsCaseTable(entry) then
-        local base = entry.nom or entry[1]
-        if type(base) == "string" then return base end
-        return "@"..id.."@"
+        res = entry.nom or entry[1]
+    else
+        res = GetPluralForm(entry, short, count)
     end
 
-    return GetPluralForm(entry, short, count) or ("@"..id.."@")
+    if type(res) ~= "string" then return "@"..id.."@" end
+    
+    if translate.InterpolateBindNames then
+        res = translate.InterpolateBindNames(res)
+    end
+    
+    return res
 end
 
 local function ApplyPositionalFormat(template, ...)
@@ -909,7 +915,18 @@ function translate.Format(id, ...)
 		return ApplyPositionalFormat(template, ...)
 	end
 
-	return string.format(template, ...)
+    local result
+    if string.find(template, "%%%d+%$[%-%+ #0%d%.]*[sdifg]") then
+        result = ApplyPositionalFormat(template, ...)
+    else
+        result = string.format(template, ...)
+    end
+
+    if translate.InterpolateBindNames then
+        result = translate.InterpolateBindNames(result)
+    end
+
+    return result
 end
 
 function translate.ItemName(id, prefix)
@@ -1532,6 +1549,20 @@ if CLIENT then
 		return translate.ClassNameKeyFor(messageID, key, defaultCase)
 	end
 
+	-- Reliable standard bindings in case default_binds is unavailable or empty
+	local DefaultBindFallbacks = {
+		["+attack"]       = "mouse1",
+		["+attack2"]      = "mouse2",
+		["+reload"]       = "r",
+		["+speed"]        = "shift",
+		["+use"]          = "e",
+		["+jump"]         = "space",
+		["+crouch"]       = "ctrl",
+		["+walk"]         = "alt",
+		["+menu"]         = "q",
+		["+menu_context"] = "c",
+	}
+
 	-- Parses GetConVar("default_binds") once and caches per-command defaults.
 	-- Format of the cvar string: bind "mouse1" "+attack"; bind "space" "+jump"; ...
 	local defaultBindCache = {}
@@ -1551,6 +1582,11 @@ if CLIENT then
 			end
 		end
 
+		-- If we didn't find anything in convar, we take it from our table
+		if not found then
+			found = DefaultBindFallbacks[bind]
+		end
+
 		defaultBindCache[bind] = found
 		return found or nil
 	end
@@ -1559,12 +1595,9 @@ if CLIENT then
 		local key     = input.LookupBinding(bind)
 		local default = GetEngineDefaultBinding(bind)
 
-		-- 1. Semantic wins if the player hasn't rebound this action
-		--    (or has nothing bound at all). The semantic string is used as a
-		--    translation key — the description author decides whether to show
-		--    "PRIMARY ATTACK", "LMB", "R", whatever. Its keyname_<semantic>
-		--    entry in the language file provides the translated wording.
-		if semantic and (not key or not default or key == default) then
+		local isDefault = key and default and string.lower(key) == string.lower(default)
+
+		if semantic and (not key or not default or isDefault) then
 			local semanticID = "keyname_" .. semantic
 			if translate.Exists(semanticID) then
 				return translate.Get(semanticID)
@@ -1572,7 +1605,6 @@ if CLIENT then
 			return semantic
 		end
 
-		-- 2. Player rebound it (or no semantic given) — show the actual key.
 		if not key then
 			return translate.Get("key_not_bound")
 		end

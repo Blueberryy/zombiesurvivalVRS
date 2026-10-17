@@ -655,7 +655,7 @@ LANGUAGE.wpn_desc_renegade							= "A rifle with high headshot damage and a dece
 
 -- Rollermine
 LANGUAGE.wpn_name_rollermine						= "Rollermine"
-LANGUAGE.wpn_desc_rollermine						= "A deployable, remotely controlled device.\nRolls along the ground, bouncing off zombies and dealing damage.\nCan jump with the {{bind:+jump|JUMP}}JUMP key."
+LANGUAGE.wpn_desc_rollermine						= "A deployable, remotely controlled device.\nRolls along the ground, bouncing off zombies and dealing damage.\nCan jump with the {{bind:+jump|JUMP}} key."
 LANGUAGE.wpn_name_rollerminecontrol					= "Rollermine Control"
 LANGUAGE.wpn_desc_rollerminecontrol					= "Controller for your Rollermine."
 
